@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarvestBridge AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🌱 HarvestBridge AI</h1>
+    <p>Rescue Unsold Harvest Before It Spoils</p>
+</header>
+
+<section class="hero">
+    <h2>Every Harvest Deserves a Buyer!</h2>
+    <p>Helping farmers find alternative buyers for their produce.</p>
+    <a href="#add-batch" class="btn">Add Harvest Batch</a>
+</section>
+
+<div class="dashboard">
+    <div class="card">
+        <h3>Active Batches</h3>
+        <p id="activeCount">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Urgent Batches</h3>
+        <p id="urgentCount">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Potential Buyers</h3>
+        <p>4</p>
+    </div>
+</div>
+
+<section class="container" id="add-batch">
+    <h2>Register Harvest</h2>
+
+    <form id="harvestForm">
+        <label>Farmer Name</label>
+        <input type="text" id="farmer" required placeholder="Enter farmer name">
+
+        <label>Crop Name</label>
+        <select id="crop">
+            <option>Tomatoes</option>
+            <option>Onions</option>
+            <option>Mangoes</option>
+            <option>Leafy Vegetables</option>
+            <option>Chillies</option>
+        </select>
+
+        <label>Quantity (kg)</label>
+        <input type="number" id="quantity" min="1" required>
+
+        <label>Village / Location</label>
+        <input type="text" id="location" required placeholder="Enter location">
+
+        <label>Expected Price (₹ per kg)</label>
+        <input type="number" id="price" min="0" required>
+
+        <label>Urgency</label>
+        <select id="urgency">
+            <option>Normal</option>
+            <option>High</option>
+            <option>Critical</option>
+        </select>
+
+        <button type="submit">Publish Harvest</button>
+    </form>
+</section>
+
+<section class="container">
+    <h2>Available Harvest Batches</h2>
+    <div id="harvestList"></div>
+</section>
+
+<section class="container">
+    <h2>Potential Alternative Buyers</h2>
+    <p id="buyerMessage">
+        Register a harvest batch to find potential buyers.
+    </p>
+    <div id="buyerList"></div>
+</section>
+
+<footer>
+    <p>HarvestBridge AI | Student Innovation Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
